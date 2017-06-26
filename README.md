@@ -24,5 +24,5 @@ This plugin is protected under the [Eclipse Public 1.0 License](http://www.eclip
 ### How to build the plugin from command line:
 
 1. Navigate to the base folder of the project through command line.
-2. Make sure that there is build.gradle file there, and then execute 'gradle' command.
+2. Make sure that there is build.gradle file, and then execute 'gradle' command.
 3. The built plugin is located at releases/logigear-testarchitect-open-vdev.zip
