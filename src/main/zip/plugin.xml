@@ -23,14 +23,14 @@
       </property>
     	<property name="displayResultFiles" required="false">
     		<property-ui type="checkBox" label="Display result files in the log"
-    			hidden="true"
+
     			default-value="true"
     			description="Should all of the Result files be displayed in the log for this step?  Specifically, display contents of all files in the result directory?"
     			/>
     	</property>
      	<property name="loggingLevel" required="false">
     		<property-ui type="textBox" label="Logging Level"
-    			hidden="true"
+
     			default-value="info"
     			description="The logging level can be: blank, 'trace', 'debug', 'info', 'warn', 'error'.  Each level includes the following ones, for example, 'trace' includes debug, but debug doesn't include trace."
     			/>
@@ -233,21 +233,21 @@
 
       <property name="testArchitectLocation" required="true">
         <property-ui type="textBox"
-    			hidden="true"
+
                 default-value="${p:testarchitect.testArchitectLocation}"
                 label="Directory where Test Architect is installed"
                 description="The absolute file location of TestArchitect, such as 'c:\Program Files\LogiGear\TestArchitect'. Do NOT include trailing slash."/>
       </property>
       <property name="timeout" required="false">
         <property-ui type="textBox"
-    			hidden="true"
+
                 default-value="600"
                 label="Timeout for calling TestArchitect"
                 description="Timeout (in seconds) for calling TestArchitect.  If this is not zero, then the step fails if TestArchitect doesn't complete in the indicated time.  TestArchitect can hang indefinitely, so a value is good."/>
       </property>
       <property name="TAstartupsettings" required="false">
 	    <property-ui type="textBox"
-   			hidden="true"
+
 		    label="/startupsettings"
 			default-value="${p?:testarchitect.startupsettings}"
 			description="Define the list of user-defined settings or reconfigured built-in settings. (Separate multiple settings with semi-colons.) Allowable values of Setting Type: - bis: built-in setting - uds: user-defined setting"
@@ -255,7 +255,7 @@
 	</property>
       <property name="TAtoolname" required="true">
 	    <property-ui type="textBox"
-   			hidden="true"
+
 		    label="/toolname"
 			default-value="TestArchitect Automation Playback"
 			description="Name of the test playback tool.  Specified in the Automation Tools dialog box."
@@ -263,7 +263,7 @@
 	</property>
       <property name="TAtoolpath" required="true">
 	    <property-ui type="textBox"
-   			hidden="true"
+
 		    label="/toolpath"
 			default-value="{INSTALL_DIR}/binclient/taplayback.exe"
 			description="The executable application's path to run the test.  Specified in the Automation Tools dialog box."
@@ -271,7 +271,7 @@
 	</property>
       <property name="TAtoolscript" required="true">
 	    <property-ui type="textBox"
-   			hidden="true"
+   			
 		    label="/toolscript"
 			default-value="{INSTALL_DIR}/binclient/taplayback.exe"
 			description="Script's path for the test playback tool. Specified in the Automation Tools dialog box."
@@ -279,7 +279,7 @@
 	</property>
       <property name="TAtoolcmd" required="false">
 	    <property-ui type="textBox"
-   			hidden="true"
+
 		    label="/toolcmd"
 			default-value="${p?:testarchitect.toolcmd}"
 			description="Execution command line. Specified in the Automation Tools dialog box."
@@ -287,7 +287,7 @@
 	</property>
       <property name="TAexechost" required="true">
 	    <property-ui type="textBox"
-   			hidden="true"
+
 		    label="/exechost"
 			default-value="${p:testarchitect.exechost}"
 			description="IP address of the TestArchitect controller that is to run the test, such as 'localhost'."
@@ -295,7 +295,7 @@
 	</property>
       <property name="TAexecport" required="true">
 	    <property-ui type="textBox"
-   			hidden="true"
+
 		    label="/execport"
 			default-value="${p:testarchitect.execport}"
 			description=""
@@ -303,7 +303,7 @@
 	</property>
       <property name="TArshost" required="true">
 	    <property-ui type="textBox"
-   			hidden="true"
+
 		    label="/rshost"
 			default-value="${p:testarchitect.rshost}"
 			description="Host name of the repository server containing the repository holding the test module to be executed."
@@ -311,7 +311,7 @@
 	</property>
       <property name="TArsport" required="true">
 	    <property-ui type="textBox"
-   			hidden="true"
+
 		    label="/rsport"
 			default-value="${p:testarchitect.rsport}"
 			description="TCP/IP port number of the repository server, such as 53400."
@@ -319,7 +319,7 @@
 	</property>
       <property name="TAdbtype" required="true">
 	    <property-ui type="textBox"
-   			hidden="true"
+
 		    label="/dbtype"
 			default-value="javadb"
 			description="Database type of the repository. At present, this argument accepts only the value javadb. (Default: javadb.)"
@@ -327,7 +327,7 @@
 	</property>
       <property name="TAlsaddr" required="true">
 	    <property-ui type="textBox"
-   			hidden="true"
+
 		    label="/lsaddr"
 			default-value="${p:testarchitect.lsaddr}"
 			description="Host name of license server."
@@ -335,7 +335,7 @@
 	</property>
       <property name="TAlsport" required="true">
 	    <property-ui type="textBox"
-   			hidden="true"
+
 		    label="/lsport"
 			default-value="${p:testarchitect.lsport}"
 			description="TCP/IP port number of the license server, such as 14101."
@@ -343,7 +343,7 @@
 	</property>
       <property name="TAlsusr" required="false">
 	    <property-ui type="textBox"
-   			hidden="true"
+
 		    label="/lsusr"
 			default-value="${p?:testarchitect.lsusr}"
 			description="User name of license server account. (The default value is empty, as it is generally not required.)"
@@ -351,7 +351,7 @@
 	</property>
       <property name="TAredunlsaddr" required="false">
 	    <property-ui type="textBox"
-   			hidden="true"
+
 		    label="/redunlsaddr"
 			default-value="${p?:testarchitect.redunlsaddr}"
 			description="IP address of redundant license server, if any."
@@ -359,7 +359,7 @@
 	</property>
       <property name="TAredunlsport" required="false">
 	    <property-ui type="textBox"
-   			hidden="true"
+
 		    label="/redunlsport"
 			default-value="${p?:testarchitect.redunlsport}"
 			description="TCP/IP port of redundant license server, if any."
@@ -367,14 +367,14 @@
 	</property>
     	<property name="displayResultFiles" required="false">
     		<property-ui type="checkBox" label="Display result files in the log"
-    			hidden="true"
+
     			default-value="true"
     			description="Should all of the Result files be displayed in the log for this step?  Specifically, display contents of all files in the result directory?"
     			/>
     	</property>
     	<property name="loggingLevel" required="false">
     		<property-ui type="textBox" label="Logging Level"
-    			hidden="true"
+
     			default-value="info"
     			description="The logging level can be: blank, 'trace', 'debug', 'info', 'warn', 'error'.  Each level includes the following ones, for example, 'trace' includes debug, but debug doesn't include trace."
     			/>
