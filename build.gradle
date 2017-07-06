@@ -34,7 +34,13 @@
  * }
  */
 
+def build   = project.hasProperty('build') ? project.getProperty('build') : ''
 def pluginName="logigear-testarchitect-open"
+if (build) {
+    pluginName="logigear-testarchitect-build-open"
+} else {
+    pluginName="logigear-testarchitect-deploy-open"
+}
 
 apply plugin: 'groovy'
 
@@ -85,7 +91,7 @@ sourceSets {
 }
 
 compileJava {
-    dependsOn 'extractGPU', 'copyi18n'
+    dependsOn 'extractGPU', 'copyi18n', 'createPluginXml'
 }
 
 task copyDeps(type: Copy) {
@@ -115,6 +121,23 @@ task extractGPU(type: Copy) {
 
     from zipTree(zipFile)
     into outputDir
+}
+
+task createPluginXml(type: Copy) {
+    if (build) {
+        from 'src/main/zip/pluginBuild.xml'
+    } else {
+        from 'src/main/zip/pluginDeploy.xml'
+    }
+    into 'src/main/zip'
+
+    rename { String fileName ->
+        if (build) {
+            fileName.replace("pluginBuild.xml", "plugin.xml")
+        } else {
+            fileName.replace("pluginDeploy.xml", "plugin.xml")
+        }
+    }
 }
 
 task copyi18n(type: Copy) {

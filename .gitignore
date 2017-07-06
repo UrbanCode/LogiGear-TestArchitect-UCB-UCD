@@ -20,3 +20,4 @@ plugin-build.xml
 # ignore translation file
 i18n-scraper.groovy
 default.rpxconfig
+/src/main/zip/plugin.xml
