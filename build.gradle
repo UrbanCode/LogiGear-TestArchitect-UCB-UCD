@@ -168,7 +168,7 @@ task distPlugin(type: Zip, dependsOn: ['compileGroovy', 'gatherI18n']) {
         exclude 'META-INF', 'i18n-scraper.groovy'
     }
     if (pluginVersion) {
-        archiveName = "${pluginName}-${pluginVersion}.zip"
+        archiveName = "${pluginName}-v${pluginVersion}.zip"
     } else {
         archiveName = "${pluginName}-dev.zip"
     }
