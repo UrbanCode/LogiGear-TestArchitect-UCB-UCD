@@ -26,6 +26,7 @@ This plug-in is protected under the [Eclipse Public 1.0 License](http://www.ecli
 ### How to build the plug-in from command line:
 
 1. Navigate to the base folder of the project through command line.
-2. Make sure that there is build.gradle file, and then execute 'gradle' command.
+2. Make sure that there is build.gradle file, and then execute `gradle` command.
 3. The built plug-in is located at `build/distributions/logigear-testarchitect-xxxx-open-vdev.zip`
+
 Note: The `gradle -Pbuild=y` command will build the IBM UrbanCode build specific plug-in. While `gradle` will build the plug-in for IBM UrbanCode Deploy.
