@@ -1,4 +1,4 @@
-# IBM UrbanCode Deploy and Build LogiGear TestArchitect Plug-in
+# IBM UrbanCode Deploy and Build LogiGear TestArchitect Plug-in [![Build Status](https://travis-ci.org/IBM-UrbanCode/LogiGear-TestArchitect-UCB-UCD.svg?branch=master)](https://travis-ci.org/IBM-UrbanCode/LogiGear-TestArchitect-UCB-UCD)
 ---
 
 ### License
