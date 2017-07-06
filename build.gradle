@@ -34,7 +34,9 @@
  * }
  */
 
-def build   = project.hasProperty('build') ? project.getProperty('build') : ''
+def pluginVersion = project.hasProperty('pluginVersion') ? project.getProperty('pluginVersion') : ''
+def build = project.hasProperty('build') ? project.getProperty('build') : ''
+
 def pluginName="logigear-testarchitect-open"
 if (build) {
     pluginName="logigear-testarchitect-build-open"
@@ -165,7 +167,11 @@ task distPlugin(type: Zip, dependsOn: ['compileGroovy', 'gatherI18n']) {
         from sourceSets.classes.groovy.srcDirs
         exclude 'META-INF', 'i18n-scraper.groovy'
     }
-    archiveName = "${pluginName}-dev.zip"
+    if (pluginVersion) {
+        archiveName = "${pluginName}-${pluginVersion}.zip"
+    } else {
+        archiveName = "${pluginName}-dev.zip"
+    }
 }
 
 task gatherI18n(type: JavaExec) {
