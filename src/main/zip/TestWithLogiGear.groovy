@@ -111,52 +111,6 @@ class TestWithLogiGear extends UCPluginStepImplementation {
 		TAredunlsport = inProps.TAredunlsport
 		timeout = 0
 
-        println ' Data: TAmod: ' + TAmod
-        println ' Data: TAresultname: ' + TAresultname
-        println ' Data: TAxupath: ' + TAxupath
-        println ' Data: TAproid: ' + TAproid
-        println ' Data: TAuid: ' + TAuid
-        println ' Data: TApwd: ' + TApwd
-        println ' Data: TAsessionid: ' + TAsessionid
-        println ' Data: TAvar: ' + TAvar
-        println ' Data: TAcomment: ' + TAcomment
-        println ' Data: TAdbname: ' + TAdbname
-        println ' Data: TAsrvid: ' + TAsrvid
-        println ' Data: TAdelay: ' + TAdelay
-        println ' Data: TAversions: ' + TAversions
-        println ' Data: TAexporthtmlpath: ' + TAexporthtmlpath
-        println ' Data: TAexportxmlpath: ' + TAexportxmlpath
-        println ' Data: TAtestsetid: ' + TAtestsetid
-        println ' Data: TAuploadresulttorepos: ' + TAuploadresulttorepos
-        println ' Data: TAuploadresultcond: ' + TAuploadresultcond
-        println ' Data: TAuploadedfiletype: ' + TAuploadedfiletype
-        println ' Data: TAtimetraveling: ' + TAtimetraveling
-        println ' Data: TAudf: ' + TAudf
-        println ' Data: TAcapturecond: ' + TAcapturecond
-        println ' Data: TAnumofinteraction: ' + TAnumofinteraction
-        println ' Data: TAexportscreenshotcond: ' + TAexportscreenshotcond
-        println ' Data: TAdevices: ' + TAdevices
-        println ' Data: testArchitectLocation: ' + testArchitectLocation
-        println ' Data: timeout: ' + timeout
-        println ' Data: TAstartupsettings: ' + TAstartupsettings
-        println ' Data: TAtoolname: ' + TAtoolname
-        println ' Data: TAtoolpath: ' + TAtoolpath
-        println ' Data: TAtoolscript: ' + TAtoolscript
-        println ' Data: TAtoolcmd: ' + TAtoolcmd
-        println ' Data: TAexechost: ' + TAexechost
-        println ' Data: TAexecport: ' + TAexecport
-        println ' Data: TArshost: ' + TArshost
-        println ' Data: TArsport: ' + TArsport
-        println ' Data: TAdbtype: ' + TAdbtype
-        println ' Data: TAlsaddr: ' + TAlsaddr
-        println ' Data: TAlsport: ' + TAlsport
-        println ' Data: TAlsusr: ' + TAlsusr
-        println ' Data: TAredunlsaddr: ' + TAredunlsaddr
-        println ' Data: TAredunlsport: ' + TAredunlsport
-        println ' Data: displayResultFiles: ' + displayResultFiles
-
-
-
         if (inProps.timeout.isInteger()) {
 			timeout = inProps.timeout.toInteger()
 		}
