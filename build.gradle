@@ -82,7 +82,6 @@ sourceSets {
     main {
         groovy {
             srcDirs = ['src/main/groovy', 'src/main/zip', "${buildDir}/util"]
-            exclude 'com/urbancode/air/AirPluginTool.groovy'
         }
     }
     zip {
@@ -98,9 +97,11 @@ sourceSets {
 }
 
 compileJava {
-    dependsOn 'extractGPU', 'copyi18n', 'createPluginXml'
+    dependsOn 'extractGPU', 'copyi18n', 'copyDeps', 'createPluginXml'
 }
-
+compileGroovy {
+    include "i18n-scraper.groovy"
+}
 task copyDeps(type: Copy) {
     into 'lib'
     copy {
@@ -189,7 +190,13 @@ task gatherI18n(type: JavaExec) {
 }
 
 task cleanAll(dependsOn: ['clean', 'cleanCopyDeps', 'cleanDistPlugin', 'cleanGatherI18n'])
+tasks.named("extractGPU") {
+    dependsOn("copyDeps")
+}
 
+tasks.named("copyi18n") {
+    dependsOn("copyDeps")
+}
 String stripVersion(String fileNameWithVersion) {
     String ext = fileNameWithVersion.substring(fileNameWithVersion.lastIndexOf("."),fileNameWithVersion.length())
     int end = fileNameWithVersion.lastIndexOf("-"); //assumes that: name-version.ext. Will not work with name-version-SNAPSHOT.ext
