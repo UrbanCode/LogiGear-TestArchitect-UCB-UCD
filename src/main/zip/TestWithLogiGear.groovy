@@ -110,7 +110,8 @@ class TestWithLogiGear extends UCPluginStepImplementation {
 		TAredunlsaddr = inProps.TAredunlsaddr
 		TAredunlsport = inProps.TAredunlsport
 		timeout = 0
-		if (inProps.timeout.isInteger()) {
+
+        if (inProps.timeout.isInteger()) {
 			timeout = inProps.timeout.toInteger()
 		}
 

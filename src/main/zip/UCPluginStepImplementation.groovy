@@ -63,7 +63,7 @@ class UCPluginStepImplementation extends LogTracingClass {
 	/**
 	 * The "home" (installation) directory of the UrbanCode agent.
 	 */
-	final File AGENT_HOME = new File(System.getenv().get("AGENT_HOME"))
+	File AGENT_HOME = new File(System.getenv().get("AGENT_HOME"))
 
 	/**
 	 * <p>Call this function to perform the step!!  Specifically, this function
@@ -85,7 +85,7 @@ class UCPluginStepImplementation extends LogTracingClass {
 
 			// load the inbound properties
 			inProps = new Properties();
-			final def inputPropsFile = new File(args[0]);
+			def inputPropsFile = new File(args[0]);
 			def inputPropsStream = new FileInputStream(inputPropsFile);
 			inProps.load(inputPropsStream);
 
@@ -108,7 +108,7 @@ class UCPluginStepImplementation extends LogTracingClass {
 
 			// If there are any outbound properties save them to the property file
 			if (outProps.size() > 0) {
-				final def outputPropsFile = new File(args[1]);
+				def outputPropsFile = new File(args[1]);
 				def outputPropsStream = new FileOutputStream(outputPropsFile);
 				outProps.store(outputPropsStream, "Output props");
 			}
@@ -188,8 +188,8 @@ class UCPluginStepImplementation extends LogTracingClass {
 	Properties getAgentProps() {
 		if (this.agentProps == null) {
 			this.agentProps = new Properties();
-			final def agentInstalledProps = new File(AGENT_HOME, "conf/agent/installed.properties")
-			final def agentInputStream = null;
+			def agentInstalledProps = new File(AGENT_HOME, "conf/agent/installed.properties")
+			def agentInputStream = null;
 			agentInputStream = new FileInputStream(agentInstalledProps);
 			agentProps.load(agentInputStream);
 		}
